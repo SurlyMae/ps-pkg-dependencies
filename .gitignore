@@ -1,0 +1,10 @@
+node_modules
+dist
+logs
+*.log
+npm-debug.log*
+.npm
+tmp
+.DS_Store
+.AppleDouble
+.LSOverride

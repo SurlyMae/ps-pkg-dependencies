@@ -7,3 +7,18 @@ test('installOrder([ "KittenService: CamelCaser", "CamelCaser: " ]) should retur
   t.deepEqual(result, expected)
   t.end()
 })
+
+test('installOrder(["KittenService: ", "Leetmeme: Cyberportal", "Cyberportal: Ice", "CamelCaser: KittenService","Fraudstream: Leetmeme","Ice: "]) should return "KittenService, CamelCaser, Ice, Cyberportal, Leetmeme, Fraudstream" ', function(t) {
+  var result = installOrder([
+    'KittenService: ',
+    'Leetmeme: Cyberportal',
+    'Cyberportal: Ice',
+    'CamelCaser: KittenService',
+    'Fraudstream: Leetmeme',
+    'Ice: '
+  ])
+  var expected =
+    'KittenService, CamelCaser, Ice, Cyberportal, Leetmeme, Fraudstream'
+  t.deepEqual(result, expected)
+  t.end()
+})
